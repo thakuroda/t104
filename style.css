@@ -1,0 +1,132 @@
+body{
+    background-color: aquamarine;
+    display: grid;
+    margin: 0;
+    grid-template-areas: 'nav nav nav nav'
+                         'header section segunda div'
+                         'footer footer footer footer';
+                        
+    grid-template-rows: 20vh 70vh 40vh }
+
+header{
+    grid-area: header;
+    background-color: #8BADD9;
+} 
+
+nav{
+    grid-area: nav;
+    background-color: #01403A;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+header, section, .segunda, div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+nav a{
+    color: #B0C1D9;
+    text-decoration: none;
+    font-size: 16pt;
+
+}
+
+nav a:hover{
+    color: blueviolet;
+    text-decoration-line: underline;]
+    transition: 2s;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: 4px dotted white;
+
+}
+
+section{
+    grid-area: section;
+    background-color: #6295D9;
+}
+
+.segunda{
+    grid-area: segunda;
+    background-color: #024959;
+}
+
+div{
+    grid-area: div;
+}
+
+footer{
+    grid-area: footer;
+    background-color: gray;
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15pt;
+
+}
+footer img{
+    height: 100px;
+    width: auto;
+}
+@media (max-width: 768px) {
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header section section'
+                             'segunda segunda div div'
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh;
+    }
+
+    nav a{
+        display: none;
+    }
+    
+}
+@media (max-width: 425px) {
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header header header'
+                             'section section section section'
+                             'segunda segunda segunda segunda'
+                             'div div div div'
+                             'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh;
+
+    }
+
+    nav a{
+        display: none;
+    }
+}
+@media (max-width: 425px) {
+    footer{
+        grid-template-areas: 'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh;
+        flex-direction: column;
+    }
+
+    nav a{
+        display: none;
+    }
+}@media (max-width: 768px) {
+    footer{
+        grid-template-areas: 'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh;
+        flex-direction: column;
+    }
+
+    nav a{
+        display: none;
+    }
